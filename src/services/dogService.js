@@ -14,6 +14,19 @@ const fetchAllDogs = async () => {
   }
 }
 
+const fetchMoreDogs = async (more) => {
+  try {
+    const res = await fetch(`${BASE_URL}${more}`, {
+      credentials: 'include',
+      mode: 'cors',
+      method: 'GET',
+    })
+    return res.json()
+  } catch (error) {
+    throw error
+  }
+}
+
 const fetchDogData = async (arr) => {
   try {
     const res = await fetch(`${BASE_URL}/dogs`, {
@@ -29,4 +42,4 @@ const fetchDogData = async (arr) => {
   }
 }
 
-export { fetchAllDogs, fetchDogData }
+export { fetchAllDogs, fetchMoreDogs, fetchDogData }
