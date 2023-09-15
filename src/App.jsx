@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 
 // page components
 import Landing from "./pages/landing/Landing"
+import BrowseDogs from "./pages/search/BrowseDogs"
 
 // components
 
@@ -17,6 +18,10 @@ export default function App() {
         <Route 
           path="/"
           element={<Landing />}
+        />
+        <Route 
+          path="/browse"
+          element={<BrowseDogs />}
         />
       </Routes>
     </>

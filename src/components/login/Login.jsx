@@ -1,5 +1,6 @@
 // npm modules
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // components
 
@@ -14,6 +15,8 @@ import styles from './Login.module.css'
 
 
 export default function Login() {
+  const navigate = useNavigate()
+  
   const [formData, setFormData] = useState({
     name: '',
     email: ''
@@ -27,6 +30,9 @@ export default function Login() {
     e.preventDefault()
     let res = await authService.login(formData)
     console.log(res)
+    if (res.status === 200) {
+      navigate('/browse')
+    }
   }
 
   return (
