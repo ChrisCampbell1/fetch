@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom"
 
 // page components
 import Landing from "./pages/landing/Landing"
-import BrowseDogs from "./pages/search/BrowseDogs"
+import BrowseDogs from "./pages/browse/BrowseDogs"
 
 // components
 
